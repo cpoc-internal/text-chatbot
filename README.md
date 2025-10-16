@@ -1,4 +1,4 @@
-## Quick Chatbot deployment
+## Quick Chatbot deployment for NVIDIA GPUS
 
 ## Download models from Hugging face
 
