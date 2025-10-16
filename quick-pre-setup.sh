@@ -1,9 +1,7 @@
 #!/bin/bash
 
-# Private AI Setup Dream Guide - Quick Pre-Setup
-# Written by Ugo Emekauwa (uemekauw@cisco.com, uemekauwa@gmail.com)
+
 # Credits: lazy-electrons (rajeshvs)
-# GitHub Repository: https://github.com/ugo-emekauwa/private-ai-setup-dream-guide
 # Summary: This script installs the NVIDIA CUDA Toolkit, NVIDIA Driver, NVIDIA Container Toolkit, Docker, the Hugging Face Hub Python Client, and NVTOP on Ubuntu 22.04.x and related systems.
 
 # Setup the Script Variables
@@ -47,28 +45,28 @@ if [ "$disable_firewall" = "true" ]; then
 fi
 
 # Install the NVIDIA CUDA Toolkit
-echo "Installing the NVIDIA CUDA Toolkit..."
-sudo apt install -y linux-headers-$(uname -r) build-essential
-sudo apt update -y
-sudo apt install -y linux-headers-$(uname -r) build-essential dkms
-sudo apt update -y
-wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64/cuda-keyring_1.1-1_all.deb
-sudo dpkg -i cuda-keyring_1.1-1_all.deb
-sudo apt-get update
-sudo apt-get install -y cuda-toolkit-12-8
+# echo "Installing the NVIDIA CUDA Toolkit..."
+# sudo apt install -y linux-headers-$(uname -r) build-essential
+# sudo apt update -y
+# sudo apt install -y linux-headers-$(uname -r) build-essential dkms
+# sudo apt update -y
+# wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64/cuda-keyring_1.1-1_all.deb
+# sudo dpkg -i cuda-keyring_1.1-1_all.deb
+# sudo apt-get update
+# sudo apt-get install -y cuda-toolkit-12-8
 
-# Install the NVIDIA Driver (as of 2-12-25, will also automatically install latest NVIDIA open kernel driver (nvidia-open))
-if grep -qiE "(microsoft|wsl)" /proc/version; then
-    echo "Microsoft WSL has been detected, skipping NVIDIA driver installation for Ubuntu, as host Windows NVIDIA drivers should be used..."
-else
-    echo "Installing the NVIDIA Driver..."
-    sudo apt-get install -y cuda-drivers-570
-fi
-nvidia-smi
-sudo apt install nvidia-fabricmanager-570
-sudo systemctl enable nvidia-fabricmanager.service
-sudo systemctl start nvidia-fabricmanager.service
-systemctl status nvidia-fabricmanager.service
+# # Install the NVIDIA Driver (as of 2-12-25, will also automatically install latest NVIDIA open kernel driver (nvidia-open))
+# if grep -qiE "(microsoft|wsl)" /proc/version; then
+#     echo "Microsoft WSL has been detected, skipping NVIDIA driver installation for Ubuntu, as host Windows NVIDIA drivers should be used..."
+# else
+#     echo "Installing the NVIDIA Driver..."
+#     sudo apt-get install -y cuda-drivers-570
+# fi
+# nvidia-smi
+# sudo apt install nvidia-fabricmanager-570
+# sudo systemctl enable nvidia-fabricmanager.service
+# sudo systemctl start nvidia-fabricmanager.service
+# systemctl status nvidia-fabricmanager.service
 
 # Uninstall Previous Docker Installations
 echo "Uninstalling Previous Docker Installations..."
