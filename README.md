@@ -17,20 +17,17 @@ All of the AI models are downloaded from [Hugging Face](https://huggingface.co) 
 1. Git clone or download the repository:
   ```
   git clone https://github.com/cpoc-internal/text-chatbot
-  ```
-2. Change directories to the text-chatbot folder.
-  ```
-  cd text-chatbot
+   cd text-chatbot
   ```
 
-3. Choose and run a pre-setup script to install all of the software packages and drivers needed to run the AI models. You have two options:
+2. Choose and run a pre-setup script to install all of the software packages and drivers needed to run the AI models. You have two options:
 
   - **Quick Pre-Setup**: This will install only the software packages and drivers needed to quickly begin deploying the AI models. None of the default AI models or Docker containers will be downloaded initially. Depending on your Internet connection speed, the downloads may take about 10-15 mins. The AI models and Docker containers will be downloaded later as each type of AI model is deployed via the corresponding script. **`WARNING:`** A server reboot is performed at the end of the script, so please save any work before starting.
   ```
   chmod +x quick-pre-setup.sh
   ./quick-pre-setup.sh
   ```
-4. Choose and run a model setup deployment script. There are several options based on what type of model you want to run:
+3. Choose and run a model setup deployment script. There are several options based on what type of model you want to run:
   - **Single Chat Model Setup**: This script sets up an environment with one chat LLM. Meta Llama 3.1 8B Instruct has been chosen as the default chat AI model. Open WebUI provides a user-friendly GUI web interface with inferencing by vLLM.
   ```
      chmod +x chat-model-single-setup.sh
