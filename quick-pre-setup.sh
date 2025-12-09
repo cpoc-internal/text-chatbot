@@ -136,9 +136,8 @@ fi
 
 # Install NVTOP
 echo "Installing NVTOP..."
-sudo add-apt-repository -y ppa:flexiondotorg/nvtop
-sudo apt update
-sudo apt-get install -y nvtop
+sudo add-apt-repository ppa:quentiumyt/nvtop
+sudo apt install nvtop
 
 # Install Python 3 pip
 echo "Installing Python 3 pip..."
