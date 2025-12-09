@@ -12,9 +12,9 @@ disable_firewall=true
 enable_rootless_docker=false
 enable_system_startup_for_rootless_docker=false
 
-apt install python3.10-venv -y 
-python3 -m venv .venv
-source .venv/bin/activate
+# apt install python3.10-venv -y 
+# python3 -m venv .venv
+# source .venv/bin/activate
 
 # Setup the Log File
 echo "Setting up the Log File..."
@@ -48,29 +48,7 @@ if [ "$disable_firewall" = "true" ]; then
     sudo systemctl disable ufw
 fi
 
-# Install the NVIDIA CUDA Toolkit
-# echo "Installing the NVIDIA CUDA Toolkit..."
-# sudo apt install -y linux-headers-$(uname -r) build-essential
-# sudo apt update -y
-# sudo apt install -y linux-headers-$(uname -r) build-essential dkms
-# sudo apt update -y
-# wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64/cuda-keyring_1.1-1_all.deb
-# sudo dpkg -i cuda-keyring_1.1-1_all.deb
-# sudo apt-get update
-# sudo apt-get install -y cuda-toolkit-12-8
 
-# # Install the NVIDIA Driver (as of 2-12-25, will also automatically install latest NVIDIA open kernel driver (nvidia-open))
-# if grep -qiE "(microsoft|wsl)" /proc/version; then
-#     echo "Microsoft WSL has been detected, skipping NVIDIA driver installation for Ubuntu, as host Windows NVIDIA drivers should be used..."
-# else
-#     echo "Installing the NVIDIA Driver..."
-#     sudo apt-get install -y cuda-drivers-570
-# fi
-# nvidia-smi
-# sudo apt install nvidia-fabricmanager-570
-# sudo systemctl enable nvidia-fabricmanager.service
-# sudo systemctl start nvidia-fabricmanager.service
-# systemctl status nvidia-fabricmanager.service
 
 # Uninstall Previous Docker Installations
 echo "Uninstalling Previous Docker Installations..."
@@ -84,8 +62,7 @@ fi
 
 # Install Docker
 echo "Installing Docker..."
-curl https://get.docker.com | sh \
-    && sudo systemctl --now enable docker
+apt  install docker.io -y
 
 # Add the user named $(whoami) to the Docker Group
 if [ ! "$enable_rootless_docker" = "true" ]; then
@@ -173,4 +150,4 @@ source ~/.bashrc
 echo "The Private AI Quick Pre-Setup has Completed."
 echo "The Server will Reboot in 5 Seconds..."
 sleep 5
-sudo reboot
+#sudo reboot
