@@ -37,3 +37,4 @@ cat << EOF >> ~/.bashrc
 export HF_HUB_ENABLE_HF_TRANSFER=1
 EOF
 source ~/.bashrc
+source .venv/bin/activate
