@@ -9,8 +9,8 @@ echo "Setting up the Script Variables..."
 set -o nounset
 disable_apparmor=true
 disable_firewall=true
-enable_rootless_docker=true
-enable_system_startup_for_rootless_docker=true
+enable_rootless_docker=false
+enable_system_startup_for_rootless_docker=false
 
 apt install python3.10-venv -y 
 python3 -m venv .venv
@@ -141,7 +141,7 @@ fi
 # Install NVTOP
 echo "Installing NVTOP..."
 sudo add-apt-repository ppa:quentiumyt/nvtop
-sudo apt install nvtop
+sudo apt install nvtop -y
 
 # Install Python 3 pip
 echo "Installing Python 3 pip..."
