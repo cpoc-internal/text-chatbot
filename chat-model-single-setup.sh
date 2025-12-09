@@ -50,7 +50,7 @@ chat_model_1_huggingface_download_local_sub_directory="${chat_model_1_huggingfac
 # Download the AI Chat Model
 echo "Downloading the AI Chat Model..."
 if $hugging_face_access_token; then
-    HF_TOKEN=$hugging_face_access_token HF_HUB_ENABLE_HF_TRANSFER=1 hf-cli download $chat_model_1_huggingface_download_source --local-dir $HOME/ai_models/$chat_model_1_huggingface_download_local_sub_directory
+    HF_TOKEN=$hugging_face_access_token HF_HUB_ENABLE_HF_TRANSFER=1 huggingface-cli download $chat_model_1_huggingface_download_source --local-dir $HOME/ai_models/$chat_model_1_huggingface_download_local_sub_directory
 else
     HF_HUB_ENABLE_HF_TRANSFER=1 hf download $chat_model_1_huggingface_download_source --local-dir $HOME/ai_models/$chat_model_1_huggingface_download_local_sub_directory
 fi
