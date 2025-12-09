@@ -19,7 +19,10 @@ All of the AI models are downloaded from [Hugging Face](https://huggingface.co) 
   git clone https://github.com/cpoc-internal/text-chatbot
    cd text-chatbot
   ```
-
+ ```
+  chmod +x prepare_server.sh
+  ./prepare_server.sh
+  ```
 2. Choose and run a pre-setup script to install all of the software packages and drivers needed to run the AI models. You have two options:
 
   - **Quick Pre-Setup**: This will install only the software packages and drivers needed to quickly begin deploying the AI models. None of the default AI models or Docker containers will be downloaded initially. Depending on your Internet connection speed, the downloads may take about 10-15 mins. The AI models and Docker containers will be downloaded later as each type of AI model is deployed via the corresponding script. **`WARNING:`** A server reboot is performed at the end of the script, so please save any work before starting.
