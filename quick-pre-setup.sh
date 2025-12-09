@@ -12,6 +12,10 @@ disable_firewall=true
 enable_rootless_docker=true
 enable_system_startup_for_rootless_docker=true
 
+apt install python3.10-venv -y 
+python3 -m venv .venv
+source .venv/bin/activate
+
 # Setup the Log File
 echo "Setting up the Log File..."
 mkdir -p $HOME/logs
