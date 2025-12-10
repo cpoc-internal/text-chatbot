@@ -21,7 +21,7 @@ sudo systemctl restart docker
 
 sudo docker run --rm --runtime=nvidia --gpus all ubuntu nvidia-smi
 
-sudo add-apt-repository ppa:quentiumyt/nvtop
+sudo add-apt-repository ppa:quentiumyt/nvtop -y
 sudo apt install nvtop -y
 
 apt install python3.10-venv -y 
