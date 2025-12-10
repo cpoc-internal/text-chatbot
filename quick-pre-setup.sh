@@ -12,9 +12,7 @@ disable_firewall=true
 enable_rootless_docker=false
 enable_system_startup_for_rootless_docker=false
 
-# apt install python3.10-venv -y 
-# python3 -m venv .venv
-# source .venv/bin/activate
+
 
 # Setup the Log File
 echo "Setting up the Log File..."
@@ -120,7 +118,11 @@ echo "Installing NVTOP..."
 sudo add-apt-repository ppa:quentiumyt/nvtop
 sudo apt install nvtop -y
 
-# Install Python 3 pip
+apt install python3.10-venv -y 
+python3 -m venv .venv
+source .venv/bin/activate
+Install Python 3 pip
+
 echo "Installing Python 3 pip..."
 sudo apt-get install -y python3-pip
 
@@ -145,7 +147,7 @@ export HF_HUB_ENABLE_HF_TRANSFER=1
 
 EOF
 source ~/.bashrc
-
+source .venv/bin/activate
 # End the Private AI Quick Pre-Setup and Reboot
 echo "The Private AI Quick Pre-Setup has Completed."
 echo "The Server will Reboot in 5 Seconds..."
