@@ -115,7 +115,7 @@ fi
 
 # Install NVTOP
 echo "Installing NVTOP..."
-sudo add-apt-repository ppa:quentiumyt/nvtop
+sudo add-apt-repository ppa:quentiumyt/nvtop -y
 sudo apt install nvtop -y
 
 apt install python3.10-venv -y 
