@@ -118,9 +118,9 @@ echo "Installing NVTOP..."
 sudo add-apt-repository ppa:quentiumyt/nvtop -y
 sudo apt install nvtop -y
 
-apt install python3.10-venv -y 
-python3 -m venv .venv
-source .venv/bin/activate
+# apt install python3.10-venv -y 
+# python3 -m venv .venv
+# source .venv/bin/activate
 Install Python 3 pip
 
 echo "Installing Python 3 pip..."
@@ -147,7 +147,7 @@ export HF_HUB_ENABLE_HF_TRANSFER=1
 
 EOF
 source ~/.bashrc
-source .venv/bin/activate
+# source .venv/bin/activate
 # End the Private AI Quick Pre-Setup and Reboot
 echo "The Private AI Quick Pre-Setup has Completed."
 echo "The Server will Reboot in 5 Seconds..."
