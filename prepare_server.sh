@@ -24,9 +24,9 @@ sudo docker run --rm --runtime=nvidia --gpus all ubuntu nvidia-smi
 sudo add-apt-repository ppa:quentiumyt/nvtop -y
 sudo apt install nvtop -y
 
-apt install python3.10-venv -y 
-python3 -m venv .venv
-source .venv/bin/activate
+# apt install python3.10-venv -y 
+# python3 -m venv .venv
+# source .venv/bin/activate
 
 sudo apt-get install -y python3-pip
 pip3 install huggingface_hub[hf_xet]
@@ -37,4 +37,4 @@ cat << EOF >> ~/.bashrc
 export HF_HUB_ENABLE_HF_TRANSFER=1
 EOF
 source ~/.bashrc
-source .venv/bin/activate
+#source .venv/bin/activate
