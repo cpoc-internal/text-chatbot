@@ -7,9 +7,9 @@
   git clone https://github.com/cpoc-internal/text-chatbot
    cd text-chatbot
   ```
-2. Install requrired libraries for this AI chatbot
+2. Install required libraries for this AI chatbot
   ```
-  chmod +x required_libraries.sh
+  chmod +x pre-install.sh
   ./quick-pre-setup.sh
   ```
 3. 
