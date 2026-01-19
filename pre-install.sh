@@ -149,7 +149,7 @@ EOF
 source ~/.bashrc
 # source .venv/bin/activate
 # End the Private AI Quick Pre-Setup and Reboot
-echo "The Private AI Quick Pre-Setup has Completed."
-echo "The Server will Reboot in 5 Seconds..."
-sleep 5
+echo "The Private AI  Setup has Completed."
+#echo "The Server will Reboot in 5 Seconds..."
+#sleep 5
 #sudo reboot
