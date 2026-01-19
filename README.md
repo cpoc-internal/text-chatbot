@@ -10,7 +10,7 @@
 2. Install required libraries for this AI chatbot
   ```
   chmod +x pre-install.sh
-  ./quick-pre-install.sh
+  ./pre-install.sh
   ```
 3. 
   - **Single Chat Model**: This script sets up an environment with one chat LLM. Meta Llama 3.1 8B Instruct has been chosen as the default chat AI model. Open WebUI provides a user-friendly GUI web interface with inferencing by vLLM.
