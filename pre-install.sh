@@ -139,7 +139,7 @@ PATH=$PATH:$HOME/.local/bin
 
 # Add Hugging Face HF-Transfer Environment Variable to .bashrc
 echo "Adding Hugging Face HF-Transfer Environment Variable to .bashrc..."
-cat << EOF >> ~/.bashrc
+sudo cat << EOF >> ~/.bashrc
 
 # Hugging Face HF-Transfer Enablement
 export HF_HUB_ENABLE_HF_TRANSFER=1
