@@ -121,7 +121,6 @@ sudo apt install nvtop -y
 # apt install python3.10-venv -y 
 # python3 -m venv .venv
 # source .venv/bin/activate
-Install Python 3 pip
 
 echo "Installing Python 3 pip..."
 sudo apt-get install -y python3-pip
