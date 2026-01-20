@@ -127,11 +127,11 @@ sudo apt-get install -y python3-pip
 
 # Install Hugging Face Hub
 echo "Installing Hugging Face Hub..."
-pip3 install huggingface_hub[hf_xet]
+sudo pip3 install huggingface_hub[hf_xet]
 
 # Install Hugging Face HF-Transfer
 echo "Installing Hugging Face HF-Transfer..."
-pip3 install hf_transfer
+sudo pip3 install hf_transfer
 
 # Update PATH with Potential 'huggingface-cli' Directory
 echo "Updating PATH with Potential 'huggingface-cli' Directory..."
